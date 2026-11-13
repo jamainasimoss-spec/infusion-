@@ -1,35 +1,165 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="LN Fusion — découvrez notre univers et nos nouveautés.">
-  <title>LN Fusion</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LN FUSION | Premium Marketplace</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#090909;color:white;font-family:Arial,sans-serif}
+header{padding:20px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #29221a;flex-wrap:wrap;gap:15px}
+.logo{font-size:27px;font-weight:900;letter-spacing:2px}
+.logo span{color:#d6ad55}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:#ddd;text-decoration:none;font-size:14px}
+nav a:hover{color:#d6ad55}
+.hero{margin:35px auto;width:88%;min-height:390px;border:1px solid #8e713c;border-radius:18px;background:radial-gradient(circle at 80% 40%,#493515,#15110b 45%,#090909 80%);display:flex;align-items:center;padding:55px}
+.hero-content{max-width:550px}
+.tag{color:#d6ad55;letter-spacing:4px;font-size:12px}
+h1{font-size:55px;margin:20px 0;line-height:1.1}
+h1 span{color:#d6ad55}
+.hero p{color:#bbb;line-height:1.7;margin-bottom:25px}
+.btn{background:linear-gradient(120deg,#b58a38,#f3d68d);color:#090909;padding:14px 25px;border-radius:6px;text-decoration:none;font-weight:bold;display:inline-block}
+section{width:88%;margin:65px auto}
+.section-title{text-align:center;margin-bottom:30px}
+.section-title h2{font-size:30px}
+.section-title p{color:#999;margin-top:10px}
+.search{max-width:600px;margin:30px auto}
+.search input{width:100%;padding:16px;background:#171717;border:1px solid #806334;border-radius:8px;color:white;font-size:15px;outline:none}
+.categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:15px}
+.category{background:#151515;border:1px solid #30271b;border-radius:12px;padding:25px;text-align:center;transition:.2s}
+.category:hover{border-color:#d6ad55;transform:translateY(-4px)}
+.category .emoji{font-size:30px;margin-bottom:12px}
+.category h3{font-size:15px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.product{background:#151515;border:1px solid #30271b;border-radius:12px;overflow:hidden}
+.product-image{height:170px;background:linear-gradient(135deg,#302516,#17120c);display:flex;align-items:center;justify-content:center;font-size:55px}
+.product-info{padding:18px}
+.product-info h3{margin-bottom:9px}
+.product-info p{color:#999;font-size:13px;margin-bottom:15px}
+.price{color:#d6ad55;font-size:20px;font-weight:bold}
+.product button{margin-top:15px;width:100%;padding:11px;background:transparent;border:1px solid #b58a38;color:#e6c77e;border-radius:5px;cursor:pointer}
+.product button:hover{background:#b58a38;color:black}
+footer{margin-top:70px;padding:35px;text-align:center;border-top:1px solid #30271b;color:#888}
+footer strong{color:#d6ad55}
+@media(max-width:600px){
+.hero{padding:30px 22px;min-height:340px}
+h1{font-size:39px}
+header{justify-content:center}
+nav{justify-content:center}
+}
+</style>
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#"><span class="mark">LN</span><span>FUSION</span></a>
-    <nav><a href="#accueil">Accueil</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></nav>
-  </header>
-  <main>
-    <section class="hero" id="accueil">
-      <div class="glow"></div>
-      <p class="eyebrow">BIENVENUE CHEZ</p>
-      <h1>LN <span>FUSION</span></h1>
-      <p class="lead">Un nouvel univers. Une nouvelle expérience.</p>
-      <a class="cta" href="#apropos">Découvrir</a>
-    </section>
-    <section class="about" id="apropos">
-      <p class="eyebrow">NOTRE UNIVERS</p>
-      <h2>Bienvenue dans LN Fusion</h2>
-      <p>Notre site est en préparation. Retrouvez bientôt ici nos nouveautés et toutes les informations sur LN Fusion.</p>
-    </section>
-    <section class="contact" id="contact">
-      <h2>Restons en contact</h2>
-      <p>De nouvelles choses arrivent bientôt.</p>
-    </section>
-  </main>
-  <footer>© 2026 LN Fusion. Tous droits réservés.</footer>
+
+<header>
+<div class="logo">LN <span>FUSION</span></div>
+<nav>
+<a href="#accueil">Accueil</a>
+<a href="#categories">Catégories</a>
+<a href="#boutique">Boutique</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<div class="hero" id="accueil">
+<div class="hero-content">
+<div class="tag">L'EXCELLENCE DU SHOPPING</div>
+<h1>DISCOVER<br><span>YOUR STYLE.</span></h1>
+<p>Bienvenue chez LN FUSION. Découvrez un univers de shopping moderne, élégant et accessible.</p>
+<a href="#boutique" class="btn">EXPLORER LA BOUTIQUE →</a>
+</div>
+</div>
+
+<section>
+<div class="search">
+<input type="search" id="search" placeholder="🔍 Rechercher un produit..." oninput="searchProducts()">
+</div>
+</section>
+
+<section id="categories">
+<div class="section-title">
+<div class="tag">EXPLOREZ</div>
+<h2>Nos catégories</h2>
+<p>Trouvez votre prochain coup de cœur.</p>
+</div>
+<div class="categories">
+<div class="category"><div class="emoji">👟</div><h3>Mode</h3></div>
+<div class="category"><div class="emoji">📱</div><h3>Technologie</h3></div>
+<div class="category"><div class="emoji">⌚</div><h3>Accessoires</h3></div>
+<div class="category"><div class="emoji">🏠</div><h3>Maison</h3></div>
+<div class="category"><div class="emoji">🎮</div><h3>Gaming</h3></div>
+</div>
+</section>
+
+<section id="boutique">
+<div class="section-title">
+<div class="tag">LA SÉLECTION LN</div>
+<h2>Notre boutique</h2>
+<p>Découvrez notre sélection.</p>
+</div>
+
+<div class="products" id="products">
+<div class="product">
+<div class="product-image">👟</div>
+<div class="product-info">
+<h3>Sneakers Collection</h3>
+<p>Style et élégance au quotidien.</p>
+<div class="price">À découvrir</div>
+<button onclick="contact()">En savoir plus</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image">🎧</div>
+<div class="product-info">
+<h3>Audio Premium</h3>
+<p>Une expérience sonore moderne.</p>
+<div class="price">À découvrir</div>
+<button onclick="contact()">En savoir plus</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image">⌚</div>
+<div class="product-info">
+<h3>Collection Watches</h3>
+<p>Le détail qui fait la différence.</p>
+<div class="price">À découvrir</div>
+<button onclick="contact()">En savoir plus</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image">🎮</div>
+<div class="product-info">
+<h3>Gaming Zone</h3>
+<p>Tout pour votre univers gaming.</p>
+<div class="price">À découvrir</div>
+<button onclick="contact()">En savoir plus</button>
+</div>
+</div>
+</div>
+</section>
+
+<footer id="contact">
+<div class="logo">LN <span>FUSION</span></div>
+<p style="margin:15px">Premium shopping. Unlimited possibilities.</p>
+<p>© 2026 LN FUSION — Tous droits réservés.</p>
+</footer>
+
+<script>
+function searchProducts(){
+const query=document.getElementById('search').value.toLowerCase();
+document.querySelectorAll('.product').forEach(product=>{
+product.style.display=product.innerText.toLowerCase().includes(query)?'':'none';
+});
+}
+function contact(){
+alert("Merci de votre intérêt pour LN FUSION ! Les informations produits arrivent bientôt.");
+}
+</script>
+
 </body>
 </html>
