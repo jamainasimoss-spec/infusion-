@@ -5,329 +5,875 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LN FUSION - Boutique Tendances</title>
-<meta name="description" content="LN FUSION : mode, sneakers, gaming, technologie et lifestyle.">
+<meta name="description" content="LN FUSION : découvre les tendances mode, sneakers, gaming et lifestyle.">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-:root{
- --black:#171717;
- --white:#fff;
- --beige:#e9dfd0;
- --cream:#f7f5f1;
- --gray:#777;
+:root {
+  --black:#171717;
+  --white:#fff;
+  --beige:#e9dfd0;
+  --cream:#f7f5f1;
+  --gray:#777;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:var(--black);font-family:Montserrat,Arial,sans-serif}
+body{
+  margin:0;
+  background:white;
+  color:var(--black);
+  font-family:Montserrat,Arial,sans-serif;
+}
 button,input{font-family:inherit}
 button{cursor:pointer}
-a{color:inherit;text-decoration:none}
-.topbar{background:var(--black);color:white;text-align:center;padding:9px;font-size:10px;letter-spacing:2px;font-weight:800}
-header{position:sticky;top:0;z-index:20;background:white;border-bottom:1px solid #eee;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px}
-.logo{font-size:26px;font-weight:900;letter-spacing:-1.5px;white-space:nowrap}
+a{text-decoration:none;color:inherit}
+
+.topbar{
+  background:var(--black);
+  color:white;
+  text-align:center;
+  padding:10px;
+  font-size:10px;
+  letter-spacing:2px;
+  font-weight:800;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:white;
+  border-bottom:1px solid #eee;
+  padding:14px 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+.logo{
+  font-size:26px;
+  font-weight:900;
+  letter-spacing:-1.5px;
+  white-space:nowrap;
+}
 .logo span{color:#a18b6d}
-.logo small{display:block;font-size:8px;letter-spacing:4px;text-align:center}
-nav{display:flex;gap:19px;align-items:center}
-nav a{font-size:10px;font-weight:900;text-transform:uppercase}
+.logo small{
+  display:block;
+  font-size:8px;
+  letter-spacing:4px;
+  text-align:center;
+}
+nav{
+  display:flex;
+  gap:19px;
+  align-items:center;
+}
+nav a{
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+}
 nav a:hover{color:#a18b6d}
-.header-actions{display:flex;gap:8px;align-items:center}
-.search-mini{width:150px;min-width:0;padding:11px 13px;border:1px solid #ddd;border-radius:30px;outline:none}
-.cart-btn,.login-btn{border:0;padding:12px 15px;border-radius:30px;font-size:10px;font-weight:900;white-space:nowrap}
+.header-actions{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.search-mini{
+  width:140px;
+  min-width:0;
+  padding:11px 13px;
+  border:1px solid #ddd;
+  border-radius:30px;
+  outline:none;
+}
+.cart-btn,.login-btn{
+  border:0;
+  padding:12px 15px;
+  border-radius:30px;
+  font-size:10px;
+  font-weight:900;
+  white-space:nowrap;
+}
 .cart-btn{background:var(--black);color:white}
 .login-btn{background:var(--beige);color:var(--black)}
-.login-btn:hover,.cart-btn:hover{opacity:.8}
+.cart-btn:hover,.login-btn:hover{opacity:.75}
 
 /* ACCUEIL */
-.hero{margin:20px 4%;min-height:440px;border-radius:12px;overflow:hidden;background:linear-gradient(90deg,#000b,#0002),url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600') center/cover;display:flex;align-items:center;padding:7%;color:white}
+.hero{
+  margin:20px 4%;
+  min-height:440px;
+  border-radius:12px;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,#000c,#0002),
+    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600") center/cover;
+  display:flex;
+  align-items:center;
+  padding:7%;
+  color:white;
+}
 .hero-content{max-width:570px}
-.tag{display:inline-block;background:var(--beige);color:#222;padding:9px 14px;font-size:10px;font-weight:900;letter-spacing:2px;border-radius:30px}
-.hero h1{font-size:clamp(43px,7vw,78px);line-height:.98;letter-spacing:-4px;margin:22px 0;font-weight:900}
-.hero p{font-size:13px;line-height:1.8;color:#eee;max-width:430px}
-.main-btn{display:inline-block;margin-top:15px;background:white;color:#111;border:0;padding:15px 23px;border-radius:30px;font-size:10px;font-weight:900}
+.tag{
+  display:inline-block;
+  background:var(--beige);
+  color:#222;
+  padding:9px 14px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+  border-radius:30px;
+}
+.hero h1{
+  font-size:clamp(43px,7vw,78px);
+  line-height:.98;
+  letter-spacing:-4px;
+  margin:22px 0;
+  font-weight:900;
+}
+.hero p{
+  font-size:13px;
+  line-height:1.8;
+  color:#eee;
+  max-width:430px;
+}
+.main-btn{
+  display:inline-block;
+  margin-top:15px;
+  background:white;
+  color:#111;
+  border:0;
+  padding:15px 23px;
+  border-radius:30px;
+  font-size:10px;
+  font-weight:900;
+}
 
 /* SECTIONS */
 section{padding:55px 6%}
-.section-head{text-align:center;margin-bottom:27px}
-.section-head small,.eyebrow{color:#a18b6d;font-weight:900;letter-spacing:3px;font-size:10px}
-.section-head h2{font-size:clamp(28px,4vw,40px);letter-spacing:-1.5px;font-weight:900;margin:9px 0}
-.section-head p{font-size:11px;color:var(--gray)}
-.section-row{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:25px}
-.section-row h2{font-size:34px;margin:7px 0 0;font-weight:900;letter-spacing:-1px}
-.section-row a{font-size:10px;font-weight:900;border-bottom:2px solid;padding-bottom:5px}
+.section-head{
+  text-align:center;
+  margin-bottom:27px;
+}
+.section-head small,.eyebrow{
+  color:#a18b6d;
+  font-weight:900;
+  letter-spacing:3px;
+  font-size:10px;
+}
+.section-head h2{
+  font-size:clamp(28px,4vw,40px);
+  letter-spacing:-1.5px;
+  font-weight:900;
+  margin:9px 0;
+}
+.section-head p{
+  font-size:11px;
+  color:var(--gray);
+}
 
 /* CATÉGORIES */
-.categories{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px}
-.category{position:relative;height:165px;border-radius:9px;overflow:hidden;background:#ddd;cursor:pointer}
-.category img{width:100%;height:100%;object-fit:cover;transition:.3s}
+.categories{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:13px;
+}
+.category{
+  position:relative;
+  height:165px;
+  border-radius:9px;
+  overflow:hidden;
+  background:#ddd;
+  cursor:pointer;
+}
+.category img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.3s;
+}
 .category:hover img{transform:scale(1.07)}
-.category:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,#0009)}
-.category span{position:absolute;z-index:2;bottom:13px;left:11px;color:white;font-size:12px;font-weight:900}
+.category:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent,#0009);
+}
+.category span{
+  position:absolute;
+  z-index:2;
+  bottom:13px;
+  left:11px;
+  color:white;
+  font-size:12px;
+  font-weight:900;
+}
 
 /* BANNIÈRE */
-.banner{margin:15px 5%;padding:48px 20px;text-align:center;background:var(--beige);border-radius:10px}
-.banner h2{font-size:clamp(28px,5vw,44px);margin:10px 0;font-weight:900}
+.banner{
+  margin:15px 5%;
+  padding:48px 20px;
+  text-align:center;
+  background:var(--beige);
+  border-radius:10px;
+}
+.banner h2{
+  font-size:clamp(28px,5vw,44px);
+  margin:10px 0;
+  font-weight:900;
+}
 .banner p{font-size:12px}
 
 /* RECHERCHE */
-.search-section{background:var(--cream);padding-top:42px;padding-bottom:42px}
-.search-area{display:flex;gap:10px;max-width:650px;margin:20px auto 0}
-.search-area input{flex:1;min-width:0;border:1px solid #ddd;border-radius:30px;padding:15px 19px;font-size:12px;outline:none}
-.search-area button{background:var(--black);color:white;border:0;padding:0 23px;border-radius:30px;font-size:10px;font-weight:900}
+.search-section{
+  background:var(--cream);
+  padding-top:42px;
+  padding-bottom:42px;
+}
+.search-area{
+  display:flex;
+  gap:10px;
+  max-width:650px;
+  margin:20px auto 0;
+}
+.search-area input{
+  flex:1;
+  min-width:0;
+  border:1px solid #ddd;
+  border-radius:30px;
+  padding:15px 19px;
+  font-size:12px;
+  outline:none;
+}
+.search-area button{
+  background:var(--black);
+  color:white;
+  border:0;
+  padding:0 23px;
+  border-radius:30px;
+  font-size:10px;
+  font-weight:900;
+}
 
 /* FILTRES */
-.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:25px}
-.filters button{border:1px solid #ddd;background:white;padding:10px 15px;border-radius:30px;font-size:10px;font-weight:800}
-.filters button.active,.filters button:hover{background:var(--black);color:white;border-color:var(--black)}
+.filters{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-bottom:25px;
+}
+.filters button{
+  border:1px solid #ddd;
+  background:white;
+  padding:10px 15px;
+  border-radius:30px;
+  font-size:10px;
+  font-weight:800;
+}
+.filters button.active,.filters button:hover{
+  background:var(--black);
+  color:white;
+  border-color:var(--black);
+}
 
 /* PRODUITS */
-.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:19px}
-.product{background:white;border:1px solid #eee;border-radius:9px;overflow:hidden;transition:.2s}
-.product:hover{transform:translateY(-3px);box-shadow:0 8px 25px #0000000d}
-.product img{width:100%;height:220px;object-fit:cover;cursor:pointer;background:#f2f2f2}
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:19px;
+}
+.product{
+  background:white;
+  border:1px solid #eee;
+  border-radius:9px;
+  overflow:hidden;
+  transition:.2s;
+}
+.product:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 25px #0000000d;
+}
+.product img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  cursor:pointer;
+  background:#f2f2f2;
+  display:block;
+}
 .product-info{padding:13px}
-.product-info small{color:#a18b6d;font-size:9px;letter-spacing:1px;font-weight:900}
-.product-info h3{font-size:13px;margin:8px 0;min-height:30px}
-.price{font-weight:900;font-size:16px}
-.add,.details-btn{width:100%;padding:11px;margin-top:9px;border-radius:5px;font-size:10px;font-weight:900}
-.add{background:var(--black);border:1px solid var(--black);color:white}
+.product-info small{
+  color:#a18b6d;
+  font-size:9px;
+  letter-spacing:1px;
+  font-weight:900;
+}
+.product-info h3{
+  font-size:13px;
+  margin:8px 0;
+  min-height:30px;
+}
+.price{
+  font-weight:900;
+  font-size:16px;
+}
+.add,.details-btn{
+  width:100%;
+  padding:11px;
+  margin-top:9px;
+  border-radius:5px;
+  font-size:10px;
+  font-weight:900;
+}
+.add{
+  background:var(--black);
+  border:1px solid var(--black);
+  color:white;
+}
 .add:hover{background:#444}
-.details-btn{background:white;border:1px solid #ddd;color:#222}
-.empty{grid-column:1/-1;text-align:center;color:#777;padding:30px}
+.details-btn{
+  background:white;
+  border:1px solid #ddd;
+  color:#222;
+}
+.empty{
+  grid-column:1/-1;
+  text-align:center;
+  color:#777;
+  padding:30px;
+}
 
 /* PANIER */
-#cart-panel{position:fixed;right:0;top:0;height:100%;width:min(370px,92%);background:white;z-index:60;padding:23px;box-shadow:0 0 40px #0003;transform:translateX(110%);transition:.3s;overflow:auto}
+#cart-panel{
+  position:fixed;
+  right:0;
+  top:0;
+  height:100%;
+  width:min(370px,92%);
+  background:white;
+  z-index:60;
+  padding:23px;
+  box-shadow:0 0 40px #0003;
+  transform:translateX(110%);
+  transition:.3s;
+  overflow:auto;
+}
 #cart-panel.open{transform:translateX(0)}
 #cart-panel h2{font-size:25px}
-.close-cart{padding:10px 14px;background:var(--black);color:white;border:0;border-radius:5px}
-.cart-line{padding:13px 0;border-bottom:1px solid #eee;font-size:12px;display:flex;justify-content:space-between;gap:8px;align-items:center}
-.cart-line button{border:0;background:var(--beige);padding:7px;border-radius:5px;font-size:10px}
+.close-cart{
+  padding:10px 14px;
+  background:var(--black);
+  color:white;
+  border:0;
+  border-radius:5px;
+}
+.cart-line{
+  padding:13px 0;
+  border-bottom:1px solid #eee;
+  font-size:12px;
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  align-items:center;
+}
+.cart-line button{
+  border:0;
+  background:var(--beige);
+  padding:7px;
+  border-radius:5px;
+  font-size:10px;
+}
 #total{font-weight:900}
 
-/* DESCRIPTION PRODUIT */
-#product-modal{display:none;position:fixed;inset:0;z-index:70;background:#000b;align-items:center;justify-content:center;padding:18px}
+/* DESCRIPTION */
+#product-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:70;
+  background:#000b;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
 #product-modal.open{display:flex}
-.modal-card{width:min(520px,100%);max-height:90vh;overflow:auto;background:white;border-radius:12px;padding:18px}
-.modal-card img{width:100%;height:260px;object-fit:cover;border-radius:8px}
+.modal-card{
+  width:min(520px,100%);
+  max-height:90vh;
+  overflow:auto;
+  background:white;
+  border-radius:12px;
+  padding:18px;
+}
+.modal-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:8px;
+}
 .modal-card h2{font-size:25px}
-.modal-card p{font-size:13px;line-height:1.8;color:#555}
-.modal-close{background:var(--black);color:white;border:0;border-radius:5px;padding:11px 15px;margin-top:10px}
+.modal-card p{
+  font-size:13px;
+  line-height:1.8;
+  color:#555;
+}
+.modal-close{
+  background:var(--black);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:11px 15px;
+  margin-top:10px;
+}
 
 /* CONNEXION */
-.auth-overlay{display:none;position:fixed;inset:0;background:#000b;z-index:100;align-items:center;justify-content:center;padding:18px}
+.auth-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#000b;
+  z-index:100;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
 .auth-overlay.open{display:flex}
-.auth-box{width:min(420px,100%);background:white;color:#171717;padding:27px;border-radius:14px;position:relative;max-height:92vh;overflow:auto}
-.auth-box h2{font-size:27px;margin:5px 0}
-.auth-box>p{font-size:11px;color:#777}
-.auth-close{position:absolute;right:15px;top:14px;background:none;border:0;font-size:21px}
-.auth-switch{display:flex;gap:8px;margin:20px 0}
-.auth-switch button{flex:1;padding:11px;border:1px solid #ddd;background:white;border-radius:7px;font-size:10px;font-weight:900}
-.auth-switch button.active{background:var(--beige);border-color:#171717}
-.auth-box input{width:100%;padding:13px;border:1px solid #ddd;border-radius:7px;margin:7px 0;outline:none;font-size:12px}
-.auth-submit{width:100%;padding:14px;margin-top:12px;background:var(--black);color:white;border:0;border-radius:7px;font-weight:900}
-.password-help{font-size:10px;line-height:1.7;color:#777;margin:8px 0}
-#password-strength{height:6px;background:#eee;border-radius:10px;overflow:hidden;margin:7px 0}
-#password-strength span{display:block;height:100%;width:0;background:#b34b4b;transition:.2s}
-#auth-message{font-size:11px;font-weight:700;line-height:1.5}
-footer{text-align:center;padding:35px 15px;border-top:1px solid #eee;color:#777;font-size:10px}
-footer strong{font-size:23px;color:#171717;letter-spacing:2px}
+.auth-box{
+  width:min(420px,100%);
+  background:white;
+  color:#171717;
+  padding:27px;
+  border-radius:14px;
+  position:relative;
+  max-height:92vh;
+  overflow:auto;
+}
+.auth-box h2{
+  font-size:27px;
+  margin:15px 0 5px;
+}
+.auth-box>p{
+  font-size:11px;
+  color:#777;
+}
+.auth-close{
+  position:absolute;
+  right:15px;
+  top:14px;
+  background:none;
+  border:0;
+  font-size:21px;
+}
+.auth-switch{
+  display:flex;
+  gap:8px;
+  margin:20px 0;
+}
+.auth-switch button{
+  flex:1;
+  padding:11px;
+  border:1px solid #ddd;
+  background:white;
+  border-radius:7px;
+  font-size:10px;
+  font-weight:900;
+}
+.auth-switch button.active{
+  background:var(--beige);
+  border-color:#171717;
+}
+.auth-box input{
+  width:100%;
+  padding:13px;
+  border:1px solid #ddd;
+  border-radius:7px;
+  margin:7px 0;
+  outline:none;
+  font-size:12px;
+}
+.auth-submit{
+  width:100%;
+  padding:14px;
+  margin-top:12px;
+  background:var(--black);
+  color:white;
+  border:0;
+  border-radius:7px;
+  font-weight:900;
+}
+.password-help{
+  font-size:10px;
+  line-height:1.7;
+  color:#777;
+  margin:8px 0;
+}
+#password-strength{
+  height:6px;
+  background:#eee;
+  border-radius:10px;
+  overflow:hidden;
+  margin:7px 0;
+}
+#strength-bar{
+  display:block;
+  height:100%;
+  width:0;
+  background:#a18b6d;
+  transition:.2s;
+}
+#auth-message{
+  font-size:11px;
+  font-weight:700;
+  line-height:1.5;
+}
+
+footer{
+  text-align:center;
+  padding:35px 15px;
+  border-top:1px solid #eee;
+  color:#777;
+  font-size:10px;
+}
+footer strong{
+  font-size:23px;
+  color:#171717;
+  letter-spacing:2px;
+}
 
 @media(max-width:900px){
- header{flex-wrap:wrap}
- nav{order:3;width:100%;justify-content:center}
- .categories{grid-template-columns:repeat(3,minmax(0,1fr))}
- .products{grid-template-columns:repeat(3,minmax(0,1fr))}
+  header{flex-wrap:wrap}
+  nav{
+    order:3;
+    width:100%;
+    justify-content:center;
+  }
+  .categories{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .products{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media(max-width:600px){
- header{padding:12px 4%;gap:10px}
- .logo{font-size:22px}
- nav{gap:13px}
- nav a{font-size:9px}
- .header-actions{width:100%;justify-content:center}
- .search-mini{flex:1;max-width:220px}
- .hero{min-height:360px;padding:35px 7%;margin:12px 3%}
- .hero h1{letter-spacing:-2px}
- section{padding:40px 5%}
- .categories{grid-template-columns:repeat(2,minmax(0,1fr))}
- .category{height:145px}
- .products{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
- .product img{height:170px}
- .product-info{padding:10px}
- .product-info h3{font-size:11px}
- .price{font-size:14px}
- .search-area button{padding:0 15px}
+  header{padding:12px 4%;gap:10px}
+  .logo{font-size:22px}
+  nav{gap:13px}
+  nav a{font-size:9px}
+  .header-actions{
+    width:100%;
+    justify-content:center;
+  }
+  .search-mini{
+    flex:1;
+    max-width:220px;
+  }
+  .hero{
+    min-height:360px;
+    padding:35px 7%;
+    margin:12px 3%;
+  }
+  .hero h1{letter-spacing:-2px}
+  section{padding:40px 5%}
+  .categories{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .category{height:145px}
+  .products{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:11px;
+  }
+  .product img{height:170px}
+  .product-info{padding:10px}
+  .product-info h3{font-size:11px}
+  .price{font-size:14px}
+  .search-area button{padding:0 15px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">BIENVENUE CHEZ LN FUSION — LE STYLE À PORTÉE DE MAIN</div>
+<div class="topbar">
+  BIENVENUE CHEZ LN FUSION — LE STYLE À PORTÉE DE MAIN
+</div>
 
 <header>
-<a href="#" aria-label="Accueil LN FUSION">
- <div class="logo">LN <span>FUSION</span><small>BOUTIQUE TENDANCES</small></div>
-</a>
+  <a href="#accueil">
+    <div class="logo">LN <span>FUSION</span>
+      <small>BOUTIQUE TENDANCES</small>
+    </div>
+  </a>
 
-<nav>
- <a href="#accueil">Accueil</a>
- <a href="#univers">Catégories</a>
- <a href="#boutique">Boutique</a>
- <a href="#nouveautes">Nouveautés</a>
-</nav>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#univers">Catégories</a>
+    <a href="#boutique">Boutique</a>
+    <a href="#nouveautes">Nouveautés</a>
+  </nav>
 
-<div class="header-actions">
- <input class="search-mini" id="search-top" placeholder="Rechercher...">
- <button class="login-btn" onclick="openLogin()">LOG IN</button>
- <button class="cart-btn" onclick="toggleCart()">PANIER (<span id="count">0</span>)</button>
-</div>
+  <div class="header-actions">
+    <input class="search-mini" id="search-top" placeholder="Rechercher...">
+    <button type="button" class="login-btn" onclick="openLogin()">LOG IN</button>
+    <button type="button" class="cart-btn" onclick="toggleCart()">
+      PANIER (<span id="count">0</span>)
+    </button>
+  </div>
 </header>
 
 <main>
+
 <div class="hero" id="accueil">
- <div class="hero-content">
-  <span class="tag">LN FUSION — NOUVELLE COLLECTION</span>
-  <h1>LE STYLE<br>COMMENCE ICI.</h1>
-  <p>Découvre les tendances du moment : vêtements, sneakers, gaming, accessoires, technologie et décoration.</p>
-  <button class="main-btn" onclick="goToShop()">DÉCOUVRIR LA BOUTIQUE</button>
- </div>
+  <div class="hero-content">
+    <span class="tag">LN FUSION — NOUVELLE COLLECTION</span>
+    <h1>LE STYLE<br>COMMENCE ICI.</h1>
+    <p>
+      Découvre les tendances du moment : vêtements, sneakers,
+      gaming, accessoires, technologie et décoration.
+    </p>
+    <button class="main-btn" onclick="goToShop()">
+      DÉCOUVRIR LA BOUTIQUE
+    </button>
+  </div>
 </div>
 
 <section id="univers">
- <div class="section-head">
-  <small>EXPLORE NOS UNIVERS</small>
-  <h2>Les catégories</h2>
-  <p>Trouve ton prochain coup de cœur.</p>
- </div>
- <div class="categories" id="categories"></div>
+  <div class="section-head">
+    <small>EXPLORE NOS UNIVERS</small>
+    <h2>Les catégories</h2>
+    <p>Trouve ton prochain coup de cœur.</p>
+  </div>
+  <div class="categories" id="categories"></div>
 </section>
 
 <div class="banner" id="nouveautes">
- <small class="eyebrow">LA SÉLECTION LN FUSION</small>
- <h2>Les tendances du moment.</h2>
- <p>Des nouveautés pour tous les styles et tous les univers.</p>
- <button class="main-btn" style="background:#171717;color:white" onclick="goToShop()">VOIR LES PRODUITS</button>
+  <small class="eyebrow">LA SÉLECTION LN FUSION</small>
+  <h2>Les tendances du moment.</h2>
+  <p>Des nouveautés pour tous les styles et tous les univers.</p>
+  <button class="main-btn"
+    style="background:#171717;color:white"
+    onclick="goToShop()">
+    VOIR LES PRODUITS
+  </button>
 </div>
 
 <section class="search-section">
- <div class="section-head">
-  <small>RECHERCHE LN FUSION</small>
-  <h2>Qu'est-ce qui te ferait plaisir ?</h2>
-  <p>Recherche un produit par son nom ou sa catégorie.</p>
- </div>
- <div class="search-area">
-  <input id="search-main" placeholder="Exemple : sneakers, sweat, casque...">
-  <button onclick="searchFromMain()">RECHERCHER</button>
- </div>
+  <div class="section-head">
+    <small>RECHERCHE LN FUSION</small>
+    <h2>Qu'est-ce qui te ferait plaisir ?</h2>
+    <p>Recherche un produit par son nom ou sa catégorie.</p>
+  </div>
+  <div class="search-area">
+    <input id="search-main"
+      placeholder="Exemple : sneakers, sweat, casque...">
+    <button onclick="searchFromMain()">RECHERCHER</button>
+  </div>
 </section>
 
 <section id="boutique">
- <div class="section-head">
-  <small>LA BOUTIQUE LN FUSION</small>
-  <h2>Découvre nos produits</h2>
-  <p>Appuie sur un article pour découvrir sa description.</p>
- </div>
- <div class="filters" id="filters"></div>
- <div class="products" id="products"></div>
+  <div class="section-head">
+    <small>LA BOUTIQUE LN FUSION</small>
+    <h2>Découvre nos produits</h2>
+    <p>Appuie sur un article pour découvrir sa description.</p>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="products" id="products">
+    <p class="empty">Chargement des produits...</p>
+  </div>
 </section>
+
 </main>
 
+<!-- PANIER -->
 <div id="cart-panel">
- <button class="close-cart" onclick="toggleCart()">FERMER ✕</button>
- <h2>Mon panier</h2>
- <div id="cart-items"></div>
- <h3>Total : <span id="total">0,00</span> €</h3>
- <p style="font-size:10px;color:#888;line-height:1.6">Boutique de démonstration : aucun paiement réel n'est effectué.</p>
+  <button class="close-cart" onclick="toggleCart()">FERMER ✕</button>
+  <h2>Mon panier</h2>
+  <div id="cart-items"></div>
+  <h3>Total : <span id="total">0,00</span> €</h3>
+  <p style="font-size:10px;color:#888;line-height:1.6">
+    Boutique de démonstration : aucun paiement réel n'est effectué.
+  </p>
 </div>
 
+<!-- DESCRIPTION PRODUIT -->
 <div id="product-modal" onclick="if(event.target===this)closeProduct()">
- <div class="modal-card">
-  <div id="product-modal-content"></div>
-  <button class="modal-close" onclick="closeProduct()">FERMER ✕</button>
- </div>
+  <div class="modal-card">
+    <div id="product-modal-content"></div>
+    <button class="modal-close" onclick="closeProduct()">FERMER ✕</button>
+  </div>
 </div>
 
-<!-- FENÊTRE DE CONNEXION -->
-<div class="auth-overlay" id="auth-overlay" onclick="if(event.target===this)closeLogin()">
- <div class="auth-box">
-  <button class="auth-close" onclick="closeLogin()">✕</button>
-  <div class="logo">LN <span>FUSION</span></div>
-  <h2 id="auth-title">Bienvenue !</h2>
-  <p>Connecte-toi à ton espace LN FUSION.</p>
+<!-- CONNEXION -->
+<div class="auth-overlay" id="auth-overlay"
+  onclick="if(event.target===this)closeLogin()">
+  <div class="auth-box">
+    <button class="auth-close" onclick="closeLogin()">✕</button>
 
-  <div class="auth-switch">
-   <button id="login-tab" class="active" onclick="switchAuth('login')">SE CONNECTER</button>
-   <button id="register-tab" onclick="switchAuth('register')">CRÉER UN COMPTE</button>
-  </div>
+    <div class="logo">LN <span>FUSION</span></div>
+    <h2 id="auth-title">Bienvenue !</h2>
+    <p>Connecte-toi à ton espace LN FUSION.</p>
 
-  <form id="auth-form">
-   <input id="auth-name" type="text" placeholder="Ton nom d'utilisateur" minlength="3" maxlength="25" autocomplete="username" required>
-   <input id="auth-password" type="password" placeholder="Ton mot de passe" autocomplete="current-password" required>
-
-   <div id="confirm-area" style="display:none">
-    <input id="auth-confirm" type="password" placeholder="Confirmer ton mot de passe" autocomplete="new-password">
-    <div class="password-help">
-     Ton mot de passe doit contenir au moins 12 caractères, une majuscule, une minuscule, un chiffre et un caractère spécial.
+    <div class="auth-switch">
+      <button id="login-tab" class="active"
+        onclick="switchAuth('login')">
+        SE CONNECTER
+      </button>
+      <button id="register-tab"
+        onclick="switchAuth('register')">
+        CRÉER UN COMPTE
+      </button>
     </div>
-    <div id="password-strength"><span id="strength-bar"></span></div>
-    <div id="strength-text" class="password-help">Solidité du mot de passe : non vérifiée</div>
-   </div>
 
-   <button class="auth-submit" id="auth-submit" type="submit">SE CONNECTER</button>
-  </form>
-  <p id="auth-message"></p>
-  <p style="font-size:9px;color:#999">La connexion réelle sera activée après configuration d'un service sécurisé.</p>
- </div>
+    <form id="auth-form">
+      <input id="auth-name" type="text"
+        placeholder="Ton nom d'utilisateur"
+        minlength="3" maxlength="25"
+        autocomplete="username" required>
+
+      <input id="auth-password" type="password"
+        placeholder="Ton mot de passe"
+        autocomplete="current-password" required>
+
+      <div id="confirm-area" style="display:none">
+        <input id="auth-confirm" type="password"
+          placeholder="Confirmer ton mot de passe"
+          autocomplete="new-password">
+
+        <div class="password-help">
+          Pour la démonstration : 12 caractères minimum,
+          une majuscule, une minuscule, un chiffre et un caractère spécial.
+        </div>
+
+        <div id="password-strength">
+          <span id="strength-bar"></span>
+        </div>
+        <div id="strength-text" class="password-help">
+          Solidité du mot de passe : non vérifiée
+        </div>
+      </div>
+
+      <button class="auth-submit" id="auth-submit" type="submit">
+        SE CONNECTER
+      </button>
+    </form>
+
+    <p id="auth-message"></p>
+    <p style="font-size:9px;color:#999">
+      Connexion de démonstration : aucun vrai compte n'est créé
+      et aucun mot de passe n'est enregistré.
+    </p>
+  </div>
 </div>
 
 <footer>
- <strong>LN FUSION</strong>
- <p>BOUTIQUE TENDANCES · MODE · GAMING · LIFESTYLE</p>
- <p>© 2026 LN FUSION — Boutique de démonstration.</p>
+  <strong>LN FUSION</strong>
+  <p>BOUTIQUE TENDANCES · MODE · GAMING · LIFESTYLE</p>
+  <p>© 2026 LN FUSION — Boutique de démonstration.</p>
 </footer>
 
 <script>
-/* PRODUITS : anciens produits conservés + nouveautés */
+/* LISTE DES PRODUITS */
 const products = [
-["T-shirt LN Fusion","Mode homme",24.90,"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600","Un t-shirt au style minimaliste, facile à associer avec un jean ou un pantalon casual."],
-["Sweat LN Fusion","Mode homme",44.90,"https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600","Un sweat au style urbain et décontracté pour composer une tenue confortable."],
-["Veste urbaine","Mode homme",59.90,"https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600","Une veste inspirée du streetwear qui apporte du caractère à une tenue."],
-["Sneakers Street","Sneakers",69.90,"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600","Des sneakers au look dynamique pour compléter une tenue casual."],
-["Hoodie Premium","Mode homme",49.90,"https://images.unsplash.com/photo-1578681994506-b8f463449011?w=600","Un hoodie moderne pour un style décontracté."],
-["Casquette Fusion","Accessoires",19.90,"https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600","Une casquette pour ajouter une touche sportive à ton look."],
-
-["Robe tendance","Mode femme",39.90,"https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600","Une robe au style actuel pour créer une tenue élégante et facile à porter."],
-["Blazer beige","Mode femme",54.90,"https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600","Un blazer chic qui apporte une touche soignée à une tenue."],
-["Pantalon large","Mode femme",34.90,"https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600","Un pantalon à la coupe ample pour un look moderne."],
-["Cardigan doux","Mode femme",32.90,"https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600","Un cardigan facile à associer pour compléter une tenue."],
-["Jean baggy","Mode homme",42.90,"https://images.unsplash.com/photo-1542272604-787c3835535d?w=600","Un jean à la coupe ample inspiré de la mode urbaine."],
-["Polo classique","Mode homme",29.90,"https://images.unsplash.com/photo-1625910513413-5fc6c3f3b8d1?w=600","Un polo au style simple pour une tenue casual."],
-["Veste oversize","Mode homme",64.90,"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600","Une veste ample au style streetwear."],
-["Baskets blanches","Sneakers",74.90,"https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600","Des baskets blanches faciles à assortir avec différentes tenues."],
-["Sneakers rétro","Sneakers",79.90,"https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600","Des sneakers inspirées des modèles rétro."],
-
-["Setup Gaming","Gaming",399,"https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=600","Un espace gaming pour créer un environnement dédié au jeu."],
-["Clavier mécanique","Gaming",79.90,"https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600","Un clavier mécanique au style moderne pour ton bureau."],
-["Casque gaming","Gaming",59.90,"https://images.unsplash.com/photo-1599669454699-248893623440?w=600","Un casque au design gaming pour accompagner tes sessions de jeu."],
-["Manette gaming","Gaming",49.90,"https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?w=600","Une manette pour profiter de tes jeux préférés."],
-["Souris gaming","Gaming",34.90,"https://images.unsplash.com/photo-1527814050087-3793815479db?w=600","Une souris au look gaming pour compléter ton équipement."],
-["Fauteuil gaming","Gaming",189,"https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=600","Un fauteuil au style gaming pour aménager ton espace."],
-
-["Lampe ambiance","Chambre",29.90,"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600","Une lampe décorative pour apporter une ambiance chaleureuse."],
-["Lit moderne","Chambre",499,"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600","Un lit au design moderne pour aménager une chambre."],
-["Décoration murale","Chambre",24.90,"https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=600","Un élément décoratif pour personnaliser les murs."],
-["Bureau design","Chambre",159,"https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600","Un bureau au style épuré pour organiser ton espace."],
-["Miroir LED","Chambre",49.90,"https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600","Un miroir décoratif pour compléter l'aménagement de ta chambre."],
-["Tapis décoratif","Chambre",39.90,"https://images.unsplash.com/photo-1600166898405-da9535204843?w=600","Un tapis pour ajouter une touche déco à ton intérieur."],
-
-["Écran HD","Technologie",179,"https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600","Un écran pour travailler, étudier ou profiter de contenus numériques."],
-["Écouteurs sans fil","Technologie",49.90,"https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600","Des écouteurs au format compact pour écouter tes contenus audio."],
-["Tablette","Technologie",229,"https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600","Une tablette polyvalente pour consulter des contenus."],
-["Appareil photo","Technologie",299,"https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600","Un appareil photo pour capturer des souvenirs."],
-["Enceinte Bluetooth","Technologie",44.90,"https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600","Une enceinte compacte pour écouter de la musique."],
-["Support téléphone","Technologie",14.90,"https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600","Un support pratique pour poser ton téléphone sur un bureau."],
-
-["Montre élégante","Accessoires",79.90,"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600","Une montre au design élégant pour compléter une tenue."],
-["Sac urbain","Accessoires",39.90,"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600","Un sac au style urbain pour les déplacements du quotidien."],
-["Lunettes tendance","Accessoires",24.90,"https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600","Des lunettes au style contemporain."],
-["Portefeuille","Accessoires",29.90,"https://images.unsplash.com/photo-1627123424574-724758594e93?w=600","Un portefeuille compact au design sobre."],
-["Trousse beauté","Beauté",16.90,"https://images.unsplash.com/photo-15964625
+  {
+    name:"T-shirt LN Fusion", category:"Mode homme", price:24.90,
+    image:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=700",
+    description:"Un t-shirt au style minimaliste, facile à associer avec un jean ou un pantalon casual."
+  },
+  {
+    name:"Sweat LN Fusion", category:"Mode homme", price:44.90,
+    image:"https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=700",
+    description:"Un sweat au style urbain et décontracté."
+  },
+  {
+    name:"Veste urbaine", category:"Mode homme", price:59.90,
+    image:"https://images.unsplash.com/photo-1551028719-00167b16eac5?w=700",
+    description:"Une veste inspirée du streetwear."
+  },
+  {
+    name:"Hoodie Premium", category:"Mode homme", price:49.90,
+    image:"https://images.unsplash.com/photo-1578681994506-b8f463449011?w=700",
+    description:"Un hoodie moderne pour un style décontracté."
+  },
+  {
+    name:"Jean baggy", category:"Mode homme", price:42.90,
+    image:"https://images.unsplash.com/photo-1542272604-787c3835535d?w=700",
+    description:"Un jean à la coupe ample inspiré de la mode urbaine."
+  },
+  {
+    name:"Polo classique", category:"Mode homme", price:29.90,
+    image:"https://images.unsplash.com/photo-1625910513413-5fc6c3f3b8d1?w=700",
+    description:"Un polo au style simple pour une tenue casual."
+  },
+  {
+    name:"Robe tendance", category:"Mode femme", price:39.90,
+    image:"https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=700",
+    description:"Une robe au style actuel pour créer une tenue élégante."
+  },
+  {
+    name:"Blazer beige", category:"Mode femme", price:54.90,
+    image:"https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=700",
+    description:"Un blazer chic qui apporte une touche soignée."
+  },
+  {
+    name:"Pantalon large", category:"Mode femme", price:34.90,
+    image:"https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700",
+    description:"Un pantalon à la coupe ample pour un look moderne."
+  },
+  {
+    name:"Cardigan doux", category:"Mode femme", price:32.90,
+    image:"https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=700",
+    description:"Un cardigan facile à associer."
+  },
+  {
+    name:"Sneakers Street", category:"Sneakers", price:69.90,
+    image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700",
+    description:"Des sneakers au look dynamique."
+  },
+  {
+    name:"Baskets blanches", category:"Sneakers", price:74.90,
+    image:"https://images.unsplash.com/photo-1549298916-b41d501d3772?w=700",
+    description:"Des baskets blanches faciles à assortir."
+  },
+  {
+    name:"Sneakers rétro", category:"Sneakers", price:79.90,
+    image:"https://images.unsplash.com/photo-1552346154-21d32810aba3?w=700",
+    description:"Des sneakers inspirées des modèles rétro."
+  },
+  {
+    name:"Casquette Fusion", category:"Accessoires", price:19.90,
+    image:"https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=700",
+    description:"Une casquette pour ajouter une touche sportive."
+  },
+  {
+    name:"Montre élégante", category:"Accessoires", price:79.90,
+    image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700",
+    description:"Une montre au design élégant."
+  },
+  {
+    name:"Sac urbain", category:"Accessoires", price:39.90,
+    image:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=700",
+    description:"Un sac au style urbain pour les déplacements."
+  },
+  {
+    name:"Lunettes tendance", category:"Accessoires", price:24.90,
+    image:"https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=700",
+    description:"Des lunettes au style contemporain."
+  },
+  {
+    name:"Clavier mécanique", category:"Gaming", price:79.90,
+    image:"https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=700",
+    description:"Un clavier mécanique au style moderne."
+  },
+  {
+    name:"Casque gaming", category:"Gaming", price:59.90,
+    image:"https://images.unsplash.com/photo-1599669454699-248893623440?w=700",
+    description:"Un casque au design gaming."
+  },
+  {
+    name:"Souris gaming", category:"Gaming", price:34.90,
+    image:"https://images.unsplash.com/photo-1527814050087-3793815479db?w=700",
+    description:"Une souris au look gaming."
+  },
+  {
+    name:"Setup Gaming", category:"Gaming", price:399,
+    image:"https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=700",
+    description:"Un espace gaming pour aménager ton environnement de jeu."
+  },
+  {
+    name:"Fauteuil gaming", category:"Gaming", price:189,
+    image:"https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=700",
+    description:"Un fauteuil au st
