@@ -4,33 +4,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LN FUSION - Mode Bêta | Boutique Premium</title>
-<meta name="description" content="Découvrez LN FUSION : mode, gaming, chambre, technologie, accessoires et lifestyle.">
+<title>LN FUSION - Boutique Premium | Mode Bêta</title>
+<meta name="description" content="Bienvenue chez LN FUSION : découvrez nos univers mode, gaming, chambre, technologie, accessoires et maison.">
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="BV1NrTkMnt08DCetxSuEl1_acOVwHcfGlSxnxOlBq-U">
 <link rel="canonical" href="https://lnfusion176.github.io/lnfusion-shop.github.io/">
+<link rel="sitemap" type="application/xml" href="https://lnfusion176.github.io/lnfusion-shop.github.io/sitemap.xml">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root{--gold:#d6b46a;--bg:#090909;--panel:#151515;--muted:#aaa}
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:#fff;font-family:Montserrat,Arial,sans-serif}
-header{position:sticky;top:0;z-index:10;background:#090909ed;border-bottom:1px solid #292929;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:10;background:#090909ed;border-bottom:1px solid #292929;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
 .logo{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;letter-spacing:3px;color:var(--gold)}
 .logo small{display:block;font:9px Montserrat;letter-spacing:5px;color:#aaa;text-align:center}
 nav{display:flex;gap:18px;flex-wrap:wrap}
 nav a{color:#ddd;text-decoration:none;font-size:12px}
 nav a:hover{color:var(--gold)}
-.actions{display:flex;gap:9px}
-button{cursor:pointer}
-.search{background:#191919;border:1px solid #444;color:white;padding:11px;border-radius:5px;max-width:150px}
-.cart{background:var(--gold);border:0;padding:11px 15px;border-radius:5px;font-weight:bold}
-.hero{min-height:400px;display:flex;align-items:center;padding:65px 8%;background:linear-gradient(90deg,#080808 10%,#080808b0 60%,transparent),url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1500') center/cover}
+.search-top{background:#191919;border:1px solid #444;color:white;padding:11px;border-radius:5px;width:150px}
+.cart{background:var(--gold);border:0;padding:11px 15px;border-radius:5px;font-weight:bold;cursor:pointer}
+.hero{min-height:410px;display:flex;align-items:center;padding:65px 8%;background:linear-gradient(90deg,#080808 10%,#080808b0 60%,transparent),url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1500') center/cover}
 .hero-content{max-width:550px}
 .eyebrow{color:var(--gold);letter-spacing:4px;font-size:11px}
-h1,h2,.section-title{font-family:'Cormorant Garamond',serif}
+h1,h2{font-family:'Cormorant Garamond',serif}
 h1{font-size:clamp(45px,7vw,76px);line-height:.95;margin:20px 0}
 .hero p{color:#ccc;line-height:1.8}
-.gold-btn{background:var(--gold);border:0;padding:14px 22px;font-weight:bold;border-radius:3px;margin-top:12px}
+.gold-btn{background:var(--gold);border:0;padding:14px 22px;font-weight:bold;border-radius:3px;margin-top:12px;cursor:pointer}
 section{padding:55px 6%}
 .section-head{text-align:center;margin-bottom:30px}
 .section-head h2{font-size:42px;margin:8px}
@@ -41,9 +42,12 @@ section{padding:55px 6%}
 .universe:hover img{transform:scale(1.08)}
 .universe:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,#000c)}
 .universe span{position:absolute;z-index:1;bottom:17px;left:13px;font-family:'Cormorant Garamond';font-size:25px}
+.banner{margin:20px 6%;padding:55px 25px;text-align:center;background:linear-gradient(90deg,#17120b,#302414,#17120b);border:1px solid #66502d}
+.banner h2{font-size:39px;color:var(--gold);margin:5px}
 .filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-bottom:25px}
-.filters button{background:#181818;color:white;border:1px solid #444;padding:10px 16px;border-radius:30px}
+.filters button{background:#181818;color:white;border:1px solid #444;padding:10px 16px;border-radius:30px;cursor:pointer}
 .filters button.active,.filters button:hover{background:var(--gold);color:#111;border-color:var(--gold)}
+.shop-search{width:100%;max-width:450px;padding:15px;background:#181818;color:white;border:1px solid var(--gold);border-radius:6px;margin:20px auto 25px;display:block;font-family:Montserrat}
 .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:19px}
 .product{background:var(--panel);border:1px solid #282828;border-radius:7px;overflow:hidden;transition:.2s}
 .product:hover{transform:translateY(-4px);border-color:var(--gold)}
@@ -52,31 +56,36 @@ section{padding:55px 6%}
 .product-info small{color:var(--gold);font-size:10px;letter-spacing:1px}
 .product-info h3{font-size:14px;margin:9px 0}
 .price{color:var(--gold);font-weight:bold;font-size:17px}
-.add{width:100%;background:#242424;border:1px solid #555;color:white;padding:11px;margin-top:12px;border-radius:4px}
+.add{width:100%;background:#242424;border:1px solid #555;color:white;padding:11px;margin-top:12px;border-radius:4px;cursor:pointer}
 .add:hover{background:var(--gold);color:#111}
-.banner{margin:20px 6%;padding:55px 25px;text-align:center;background:linear-gradient(90deg,#17120b,#302414,#17120b);border:1px solid #66502d}
-.banner h2{font-size:39px;color:var(--gold);margin:5px}
 footer{text-align:center;padding:35px 15px;border-top:1px solid #292929;color:#999;font-size:11px}
 footer strong{color:var(--gold);font-family:'Cormorant Garamond';font-size:24px}
 #cart-panel{position:fixed;right:0;top:0;height:100%;width:min(360px,90%);background:#111;z-index:30;padding:25px;box-shadow:0 0 40px #000;transform:translateX(110%);transition:.3s;overflow:auto}
 #cart-panel.open{transform:translateX(0)}
-#cart-panel button{padding:10px;background:var(--gold);border:0;border-radius:4px}
+#cart-panel button{padding:9px;background:var(--gold);border:0;border-radius:4px;cursor:pointer}
 .cart-line{padding:12px 0;border-bottom:1px solid #333;font-size:13px}
-@media(max-width:600px){header{justify-content:center}.hero{min-height:350px;padding:45px 7%}section{padding:40px 5%}.product img{height:190px}}
+@media(max-width:600px){
+ header{justify-content:center}
+ .hero{min-height:350px;padding:45px 7%}
+ section{padding:40px 5%}
+ .product img{height:190px}
+ .search-top{width:130px}
+}
 </style>
 </head>
+
 <body>
 <header>
- <a href="#" style="text-decoration:none"><div class="logo">LN FUSION<small>MODE BÊTA</small></div></a>
+ <a href="#" style="text-decoration:none">
+  <div class="logo">LN FUSION<small>MODE BÊTA</small></div>
+ </a>
  <nav>
   <a href="#univers">Nos univers</a>
   <a href="#boutique">Boutique</a>
   <a href="#nouveautes">Nouveautés</a>
  </nav>
- <div class="actions">
-  <input class="search" id="search" placeholder="Rechercher..." aria-label="Rechercher un produit">
-  <button class="cart" onclick="toggleCart()">Panier (<span id="count">0</span>)</button>
- </div>
+ <input class="search-top" id="search-top" placeholder="Rechercher..." aria-label="Rechercher un produit">
+ <button class="cart" onclick="toggleCart()">Panier (<span id="count">0</span>)</button>
 </header>
 
 <div class="hero">
@@ -116,6 +125,10 @@ footer strong{color:var(--gold);font-family:'Cormorant Garamond';font-size:24px}
   <h2>La boutique</h2>
   <p>Explorez nos différents produits.</p>
  </div>
+
+ <!-- RECHERCHE DANS LA BOUTIQUE -->
+ <input class="shop-search" id="search-shop" type="search" placeholder="🔍 Rechercher un produit..." aria-label="Rechercher dans la boutique">
+
  <div class="filters" id="filters">
   <button class="active" onclick="setFilter('Tous',this)">Tout</button>
   <button onclick="setFilter('Mode',this)">Mode</button>
@@ -132,7 +145,7 @@ footer strong{color:var(--gold);font-family:'Cormorant Garamond';font-size:24px}
  <button onclick="toggleCart()">Fermer ✕</button>
  <h2>Mon panier</h2>
  <div id="cart-items"></div>
- <h3>Total : <span id="total">0</span> €</h3>
+ <h3>Total : <span id="total">0,00</span> €</h3>
  <p style="font-size:11px;color:#aaa">Boutique de démonstration : aucune commande ni aucun paiement réel.</p>
 </div>
 
@@ -150,60 +163,109 @@ const products=[
 ["Sneakers Street","Mode",69.90,"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"],
 ["Hoodie Premium","Mode",49.90,"https://images.unsplash.com/photo-1578681994506-b8f463449011?w=600"],
 ["Casquette Fusion","Mode",19.90,"https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600"],
+["Pantalon cargo","Mode",39.90,"https://images.unsplash.com/photo-1517438476312-10d79c077509?w=600"],
+["Chemise élégante","Mode",34.90,"https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600"],
 ["Setup Gaming","Gaming",399,"https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=600"],
 ["Clavier mécanique","Gaming",79.90,"https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600"],
 ["Casque gaming","Gaming",59.90,"https://images.unsplash.com/photo-1599669454699-248893623440?w=600"],
 ["Manette gaming","Gaming",49.90,"https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?w=600"],
 ["Souris gaming","Gaming",34.90,"https://images.unsplash.com/photo-1527814050087-3793815479db?w=600"],
 ["Fauteuil gaming","Gaming",189,"https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=600"],
+["Tapis gaming","Gaming",19.90,"https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=600"],
 ["Lampe ambiance","Chambre",29.90,"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600"],
 ["Lit moderne","Chambre",499,"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600"],
 ["Décoration murale","Chambre",24.90,"https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=600"],
 ["Bureau design","Chambre",159,"https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600"],
+["Lampe de chevet","Chambre",34.90,"https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600"],
 ["Écran HD","Technologie",179,"https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600"],
 ["Écouteurs sans fil","Technologie",49.90,"https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600"],
 ["Tablette","Technologie",229,"https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600"],
 ["Appareil photo","Technologie",299,"https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600"],
+["Enceinte Bluetooth","Technologie",39.90,"https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600"],
 ["Montre élégante","Accessoires",79.90,"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600"],
 ["Sac urbain","Accessoires",39.90,"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600"],
 ["Lunettes tendance","Accessoires",24.90,"https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600"],
 ["Portefeuille","Accessoires",29.90,"https://images.unsplash.com/photo-1627123424574-724758594e93?w=600"],
+["Sac à dos","Accessoires",44.90,"https://images.unsplash.com/photo-1622560480654-d96214fdc887?w=600"],
 ["Canapé moderne","Maison",599,"https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600"],
 ["Chaise design","Maison",89.90,"https://images.unsplash.com/photo-1503602642458-232111445657?w=600"],
 ["Vase décoratif","Maison",19.90,"https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=600"],
-["Table basse","Maison",129,"https://images.unsplash.com/photo-1499933374294-4584851497cc?w=600"]
+["Table basse","Maison",129,"https://images.unsplash.com/photo-1499933374294-4584851497cc?w=600"],
+["Miroir design","Maison",59.90,"https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600"]
 ];
-let filter='Tous',cart=[];
+
+let filter='Tous';
+let cart=[];
+
 const money=n=>n.toFixed(2).replace('.',',');
+
 function render(){
- const query=document.getElementById('search').value.toLowerCase();
- const list=products.filter(p=>(filter==='Tous'||p[1]===filter)&&p[0].toLowerCase().includes(query));
- document.getElementById('products').innerHTML=list.map((p)=>`
+ const query=document.getElementById('search-shop').value.trim().toLowerCase();
+ const list=products.filter(p=>
+  (filter==='Tous'||p[1]===filter)&&
+  p[0].toLowerCase().includes(query)
+ );
+ document.getElementById('products').innerHTML=list.map(p=>`
  <article class="product">
- <img src="${p[3]}" alt="${p[0]}" loading="lazy">
- <div class="product-info"><small>${p[1].toUpperCase()}</small>
- <h3>${p[0]}</h3><div class="price">${money(p[2])} €</div>
- <button class="add" onclick="addToCart('${p[0]}')">Ajouter au panier</button></div>
- </article>`).join('')||'<p>Aucun produit trouvé.</p>';
+  <img src="${p[3]}" alt="${p[0]}" loading="lazy">
+  <div class="product-info">
+   <small>${p[1].toUpperCase()}</small>
+   <h3>${p[0]}</h3>
+   <div class="price">${money(p[2])} €</div>
+   <button class="add" onclick="addToCart('${p[0]}')">Ajouter au panier</button>
+  </div>
+ </article>
+ `).join('')||'<p>Aucun produit trouvé.</p>';
 }
+
 function setFilter(value,button){
  filter=value;
- document.querySelectorAll('.filters button').forEach(b=>b.classList.toggle('active',b.textContent.trim()===value||(value==='Tous'&&b.textContent.trim()==='Tout')));
+ document.querySelectorAll('.filters button').forEach(b=>{
+  b.classList.toggle('active',b.textContent.trim()===(value==='Tous'?'Tout':value));
+ });
+ document.getElementById('search-shop').value='';
  render();
 }
+
 function addToCart(name){
  const p=products.find(x=>x[0]===name);
- cart.push(p);updateCart();
+ if(p){cart.push(p);updateCart();}
 }
+
+function removeItem(i){
+ cart.splice(i,1);
+ updateCart();
+}
+
 function updateCart(){
  document.getElementById('count').textContent=cart.length;
- document.getElementById('cart-items').innerHTML=cart.map((p,i)=>`<div class="cart-line">${p[0]} — ${money(p[2])} € <button onclick="removeItem(${i})">Retirer</button></div>`).join('')||'<p>Ton panier est vide.</p>';
+ document.getElementById('cart-items').innerHTML=cart.map((p,i)=>`
+ <div class="cart-line">
+  ${p[0]} — ${money(p[2])} €
+  <button onclick="removeItem(${i})">Retirer</button>
+ </div>
+ `).join('')||'<p>Ton panier est vide.</p>';
  document.getElementById('total').textContent=money(cart.reduce((s,p)=>s+p[2],0));
 }
-function removeItem(i){cart.splice(i,1);updateCart()}
-function toggleCart(){document.getElementById('cart-panel').classList.toggle('open')}
-document.getElementById('search').addEventListener('input',render);
-render();updateCart();
+
+function toggleCart(){
+ document.getElementById('cart-panel').classList.toggle('open');
+}
+
+// Les deux recherches utilisent le même filtre de produits.
+document.getElementById('search-shop').addEventListener('input',function(){
+ document.getElementById('search-top').value=this.value;
+ render();
+});
+
+document.getElementById('search-top').addEventListener('input',function(){
+ document.getElementById('search-shop').value=this.value;
+ document.getElementById('boutique').scrollIntoView({behavior:'smooth'});
+ render();
+});
+
+render();
+updateCart();
 </script>
 </body>
 </html>
