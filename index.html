@@ -3,204 +3,241 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LN FUSION | Marketplace</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LN FUSION - MODE BÊTA</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#090909;color:#fff;font-family:Arial,sans-serif}
-:root{--gold:#d6b15e;--purple:#8955e9}
-header{height:75px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;background:#101010;border-bottom:1px solid #302718;position:sticky;top:0;z-index:20}
-.logo{font-size:25px;font-weight:900;letter-spacing:2px}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#d6b15e;--purple:#9257ed;--bg:#090909}
+body{background:var(--bg);color:white;font-family:Arial,sans-serif}
+header{position:sticky;top:0;z-index:20;background:#101010;border-bottom:1px solid #44351f;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.logo{font-size:23px;font-weight:900;letter-spacing:2px}
 .logo span{color:var(--gold)}
-nav{display:flex;gap:23px}
-nav a{color:#ddd;text-decoration:none;font-size:14px}
-nav a:hover{color:var(--gold)}
-.cart{background:#d6b15e;color:#111;padding:11px 16px;border-radius:7px;font-weight:bold}
-.hero{margin:30px auto;width:90%;min-height:340px;border-radius:17px;display:flex;align-items:center;padding:50px;background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1500') center/cover;border:1px solid #68502c}
+.beta{font-size:9px;color:#bd98ff;border:1px solid var(--purple);padding:5px;border-radius:5px;vertical-align:middle}
+nav{display:flex;gap:15px;flex-wrap:wrap}
+nav button{background:none;border:0;color:#ddd;cursor:pointer;font-size:13px}
+nav button:hover{color:var(--gold)}
+.cart{background:var(--gold);color:#111;padding:10px 13px;border-radius:6px;font-weight:bold;border:0;cursor:pointer}
+.hero{width:90%;margin:28px auto;min-height:340px;border:1px solid #765b2e;border-radius:15px;display:flex;align-items:center;padding:40px;background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.3)),url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1400') center/cover}
 .hero-content{max-width:550px}
-.tag{color:var(--gold);letter-spacing:4px;font-size:12px;font-weight:bold}
-h1{font-size:53px;line-height:1.1;margin:20px 0}
+.tag{color:var(--gold);font-size:11px;letter-spacing:4px;font-weight:bold}
+h1{font-size:49px;line-height:1.1;margin:18px 0}
 h1 span{color:var(--gold)}
-.hero p{color:#ccc;line-height:1.7;margin-bottom:25px}
-.btn{display:inline-block;background:linear-gradient(120deg,#b78b38,#f2d88f);padding:14px 23px;color:#111;text-decoration:none;font-weight:bold;border-radius:6px}
-section{width:90%;margin:55px auto}
-.heading{text-align:center;margin-bottom:30px}
-.heading h2{font-size:30px;margin:12px 0}
+.hero p{color:#ccc;line-height:1.7;margin-bottom:24px}
+.btn{background:linear-gradient(120deg,#b58a38,#f3d68d);color:#111;padding:14px 22px;border:0;border-radius:5px;font-weight:bold;cursor:pointer}
+section{width:90%;margin:50px auto}
+.heading{text-align:center;margin-bottom:28px}
+.heading h2{font-size:29px;margin:12px 0}
 .heading p{color:#999;font-size:14px}
-.search{margin:30px auto;max-width:650px}
-.search input{width:100%;padding:16px 20px;border-radius:8px;background:#171717;border:1px solid #554329;color:white;font-size:15px;outline:none}
-.categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:17px}
-.category{height:150px;border:1px solid #382e20;border-radius:12px;overflow:hidden;position:relative;cursor:pointer}
-.category img{width:100%;height:100%;object-fit:cover;transition:.3s;opacity:.65}
-.category:hover img{transform:scale(1.1);opacity:.9}
-.category div{position:absolute;bottom:0;left:0;width:100%;padding:15px;background:linear-gradient(transparent,#000);font-weight:bold;font-size:16px}
+.search{max-width:650px;margin:25px auto}
+.search input{width:100%;padding:15px;background:#171717;border:1px solid #65502e;border-radius:8px;color:white;font-size:15px}
+.categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:15px}
+.category{height:145px;border:1px solid #42321e;border-radius:11px;overflow:hidden;position:relative;cursor:pointer;background:#181818}
+.category img{width:100%;height:100%;object-fit:cover;opacity:.7;transition:.3s}
+.category:hover img{transform:scale(1.08);opacity:1}
+.category div{position:absolute;bottom:0;left:0;width:100%;padding:16px;background:linear-gradient(transparent,#000);font-weight:bold}
 .category.active{border:2px solid var(--gold)}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:20px}
-.product{background:#151515;border:1px solid #30291f;border-radius:12px;overflow:hidden;transition:.25s}
-.product:hover{transform:translateY(-5px);border-color:var(--gold)}
-.product img{width:100%;height:205px;object-fit:cover;background:#222}
-.info{padding:17px}
-.category-label{font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:2px}
-.info h3{font-size:16px;margin:10px 0}
-.description{font-size:12px;color:#999;min-height:30px}
-.price{font-size:21px;font-weight:bold;color:var(--gold);margin-top:13px}
-.fake{font-size:10px;color:#888;margin-top:5px}
-.product button{width:100%;margin-top:14px;padding:11px;background:transparent;border:1px solid var(--gold);border-radius:5px;color:var(--gold);cursor:pointer;font-weight:bold}
-.product button:hover{background:var(--gold);color:#111}
+.brand-category{background:radial-gradient(circle,#33224c,#100c19 65%,#080808);display:flex;align-items:center;justify-content:center}
+.brand-category .brand-logo{font-size:25px;font-weight:900;letter-spacing:2px;color:white;text-align:center}
+.brand-category .brand-logo span{color:var(--gold)}
+.brand-category .brand-logo small{display:block;color:#b58aff;font-size:9px;letter-spacing:5px;margin-top:8px}
+#shop{display:none}
+.back{background:#222;border:1px solid #555;color:white;padding:10px 15px;border-radius:5px;cursor:pointer;margin-bottom:25px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:19px}
+.product{background:#151515;border:1px solid #30291f;border-radius:11px;overflow:hidden;transition:.2s}
+.product:hover{transform:translateY(-4px);border-color:var(--gold)}
+.photo{height:210px;position:relative;background:#222;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+.brand-print{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.82);border:1px solid var(--gold);padding:9px 12px;color:var(--gold);font-weight:900;letter-spacing:2px;font-size:13px;text-align:center;white-space:nowrap}
+.info{padding:16px}
+.label{color:var(--gold);font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.info h3{margin:9px 0;font-size:16px}
+.desc{font-size:12px;color:#999;min-height:28px}
+.price{color:var(--gold);font-size:21px;font-weight:bold;margin-top:12px}
+.fake{color:#888;font-size:10px;margin-top:5px}
+.info button{width:100%;margin-top:13px;padding:11px;background:transparent;border:1px solid var(--gold);color:var(--gold);border-radius:5px;cursor:pointer}
+.info button:hover{background:var(--gold);color:#111}
 .empty{text-align:center;color:#aaa;padding:30px;display:none}
-footer{padding:40px 15px;text-align:center;background:#101010;border-top:1px solid #30291f;color:#888}
-footer .logo{margin-bottom:15px}
-footer p{font-size:13px;margin:8px}
-@media(max-width:650px){
-header{height:auto;padding:16px 4%;flex-wrap:wrap;gap:15px}
-nav{order:3;width:100%;justify-content:center;gap:16px}
-nav a{font-size:12px}
-.hero{padding:30px 22px;min-height:320px}
-h1{font-size:39px}
-section{width:92%}
-}
+.cart-list{margin:20px 0;color:#ddd;line-height:2}
+footer{margin-top:65px;background:#101010;border-top:1px solid #44351f;padding:35px 15px;text-align:center;color:#888}
+footer p{margin-top:12px;font-size:13px}
+@media(max-width:600px){header{justify-content:center}nav{width:100%;justify-content:center;gap:12px}nav button{font-size:12px}.hero{padding:27px 20px;min-height:310px}h1{font-size:38px}section{width:92%}}
 </style>
 </head>
 <body>
 
 <header>
-<div class="logo">LN <span>FUSION</span></div>
+<div class="logo">LN <span>FUSION</span> <span class="beta">MODE BÊTA</span></div>
 <nav>
-<a href="#accueil">Accueil</a>
-<a href="#categories">Catégories</a>
-<a href="#boutique">Boutique</a>
-<a href="#contact">Contact</a>
+<button onclick="home()">Accueil</button>
+<button onclick="openCategory('LN FUSION')">LN FUSION</button>
+<button onclick="openCategory('Mode')">Mode</button>
+<button onclick="openCategory('Gaming')">Gaming</button>
+<button onclick="openCategory('Chambre')">Chambre</button>
 </nav>
-<div class="cart">🛒 Panier : <span id="count">0</span></div>
+<button class="cart" onclick="showCart()">🛒 <span id="count">0</span></button>
 </header>
 
-<div class="hero" id="accueil">
+<div class="hero" id="hero">
 <div class="hero-content">
-<div class="tag">WELCOME TO LN FUSION</div>
+<div class="tag">BIENVENUE CHEZ LN FUSION</div>
 <h1>DISCOVER<br><span>YOUR STYLE.</span></h1>
-<p>Mode, gaming, technologie et lifestyle. Découvrez un univers shopping moderne où le style rencontre l'innovation.</p>
-<a href="#boutique" class="btn">DÉCOUVRIR LA BOUTIQUE →</a>
+<p>Mode, gaming, technologie et lifestyle. Explore un univers shopping imaginé pour toi.</p>
+<button class="btn" onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})">EXPLORER LES CATÉGORIES →</button>
 </div>
 </div>
-
-<section>
-<div class="search">
-<input id="search" type="search" placeholder="🔍 Rechercher un produit..." oninput="render()">
-</div>
-</section>
 
 <section id="categories">
 <div class="heading">
-<div class="tag">EXPLOREZ NOTRE UNIVERS</div>
+<div class="tag">EXPLORE TON UNIVERS</div>
 <h2>Nos catégories</h2>
-<p>Trouvez votre prochain coup de cœur.</p>
+<p>Choisis ton univers et découvre nos collections.</p>
 </div>
 <div class="categories">
-<div class="category active" onclick="filter('Tous',this)">
-<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=500">
-<div>✨ Tout voir</div>
+
+<div class="category brand-category" onclick="openCategory('LN FUSION')">
+<div class="brand-logo">LN <span>FUSION</span><small>ORIGINAL COLLECTION</small></div>
 </div>
-<div class="category" onclick="filter('Gaming',this)">
+
+<div class="category" onclick="openCategory('Mode')">
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500">
+<div>👕 Mode</div>
+</div>
+
+<div class="category" onclick="openCategory('Gaming')">
 <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=500">
 <div>🎮 Gaming</div>
 </div>
-<div class="category" onclick="filter('Vêtements',this)">
-<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500">
-<div>👕 Vêtements</div>
+
+<div class="category" onclick="openCategory('Chambre')">
+<img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=500">
+<div>🛏️ Chambre</div>
 </div>
-<div class="category" onclick="filter('Technologie',this)">
+
+<div class="category" onclick="openCategory('Technologie')">
 <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=500">
 <div>📱 Technologie</div>
 </div>
-<div class="category" onclick="filter('Accessoires',this)">
+
+<div class="category" onclick="openCategory('Accessoires')">
 <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500">
 <div>⌚ Accessoires</div>
 </div>
-<div class="category" onclick="filter('Maison',this)">
+
+<div class="category" onclick="openCategory('Maison')">
 <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=500">
 <div>🏠 Maison</div>
 </div>
+
 </div>
 </section>
 
-<section id="boutique">
+<section id="shop">
+<button class="back" onclick="home()">← Retour aux catégories</button>
 <div class="heading">
-<div class="tag">LA SÉLECTION LN</div>
-<h2>Nos produits</h2>
-<p>Une sélection fictive pour découvrir LN FUSION.</p>
+<div class="tag">LN FUSION MARKETPLACE</div>
+<h2 id="categoryTitle">Nos produits</h2>
+<p>Découvre notre sélection.</p>
+</div>
+<div class="search">
+<input id="search" type="search" placeholder="🔍 Rechercher un produit..." oninput="render()">
 </div>
 <div class="products" id="products"></div>
 <div class="empty" id="empty">Aucun produit trouvé.</div>
 </section>
 
-<footer id="contact">
+<footer>
 <div class="logo">LN <span>FUSION</span></div>
 <p>Premium shopping. Unlimited possibilities.</p>
-<p>Contact : contact@lnfusion.example</p>
-<p>© 2026 LN FUSION — Tous droits réservés.</p>
-<p>Maquette de démonstration : produits, prix et commandes fictifs.</p>
+<p>LN FUSION – MODE BÊTA</p>
+<p>© 2026 LN FUSION. Tous droits réservés.</p>
+<p>Maquette de démonstration : produits et prix fictifs.</p>
 </footer>
 
 <script>
-const items=[
-{name:"Gaming Headset",cat:"Gaming",price:59.99,desc:"Casque gaming au style moderne.",img:"photo-1599669454699-248893623440"},
-{name:"Gaming Setup",cat:"Gaming",price:249.99,desc:"Un setup pour ton univers gaming.",img:"photo-1593305841991-05c297ba4575"},
-{name:"Manette Wireless",cat:"Gaming",price:44.99,desc:"Manette sans fil fictive.",img:"photo-1606144042614-b2417e99c4e3"},
-{name:"Gaming Keyboard",cat:"Gaming",price:79.99,desc:"Clavier gaming RGB.",img:"photo-1541140532154-b024d705b90a"},
-{name:"Urban Hoodie",cat:"Vêtements",price:39.99,desc:"Sweat urbain collection LN.",img:"photo-1556821840-3a63f95609a7"},
-{name:"Sneakers Street",cat:"Vêtements",price:89.99,desc:"Sneakers au style streetwear.",img:"photo-1542291026-7eec264c27ff"},
-{name:"Classic Outfit",cat:"Vêtements",price:54.99,desc:"Une tenue moderne et décontractée.",img:"photo-1529139574466-a303027c1d8b"},
-{name:"Premium Jacket",cat:"Vêtements",price:109.99,desc:"Veste style premium.",img:"photo-1551028719-00167b16eac5"},
-{name:"Wireless Earbuds",cat:"Technologie",price:49.99,desc:"Écouteurs sans fil fictifs.",img:"photo-1606220945770-b5b6c2c55bf1"},
-{name:"Smartphone X",cat:"Technologie",price:399.99,desc:"Téléphone concept nouvelle génération.",img:"photo-1511707171634-5f897ff02aa9"},
-{name:"Tablet Pro",cat:"Technologie",price:279.99,desc:"Tablette pour le quotidien.",img:"photo-1544244015-0df4b3ffc6b0"},
-{name:"Luxury Watch",cat:"Accessoires",price:129.99,desc:"Montre élégante et moderne.",img:"photo-1523275335684-37898b6baf30"},
-{name:"Premium Backpack",cat:"Accessoires",price:69.99,desc:"Sac pratique et tendance.",img:"photo-1553062407-98eeb64c6a62"},
-{name:"Modern Lamp",cat:"Maison",price:34.99,desc:"Lampe design pour ton espace.",img:"photo-1507473885765-e6ed057f782c"},
-{name:"Interior Decor",cat:"Maison",price:89.99,desc:"Décoration élégante pour la maison.",img:"photo-1600210492486-724fe5c67fb0"}
+const products=[
+["Hoodie LN Fusion","LN FUSION",59.99,"Sweat officiel de la collection fictive.","photo-1556821840-3a63f95609a7",true],
+["T-shirt LN Fusion","LN FUSION",29.99,"T-shirt avec logo LN FUSION.","photo-1521572163474-6864f9cf17ab",true],
+["Jogging LN Fusion","LN FUSION",44.99,"Jogging de la collection LN.","photo-1552902865-b72c031ac5ea",true],
+["Veste LN Fusion","LN FUSION",79.99,"Veste streetwear avec logo.","photo-1551028719-00167b16eac5",true],
+["Casquette LN Fusion","LN FUSION",24.99,"Casquette avec logo de marque.","photo-1588850561407-ed78c282e89b",true],
+["Sneakers Street","Mode",89.99,"Sneakers style urbain.","photo-1542291026-7eec264c27ff"],
+["Urban Hoodie","Mode",39.99,"Sweat confortable.","photo-1578681994506-b8f463449011"],
+["Streetwear Outfit","Mode",69.99,"Tenue tendance.","photo-1529139574466-a303027c1d8b"],
+["Gaming Headset","Gaming",59.99,"Casque gaming moderne.","photo-1599669454699-248893623440"],
+["Gaming Keyboard","Gaming",79.99,"Clavier gaming RGB.","photo-1541140532154-b024d705b90a"],
+["Manette Wireless","Gaming",44.99,"Manette sans fil fictive.","photo-1606144042614-b2417e99c4e3"],
+["Gaming Chair","Gaming",149.99,"Fauteuil pour setup gaming.","photo-1598550476439-6847785fcea6"],
+["LED RGB Chambre","Chambre",19.99,"Éclairage décoratif RGB.","photo-1550745165-9bc0b252726f"],
+["Lampe Design","Chambre",34.99,"Lampe pour ta chambre.","photo-1507473885765-e6ed057f782c"],
+["Bureau Gaming","Chambre",129.99,"Bureau moderne.","photo-1497366754035-f200968a6e72"],
+["Décoration Chambre","Chambre",29.99,"Accessoire décoratif.","photo-1616486338812-3dadae4b4ace"],
+["Smartphone X","Technologie",399.99,"Téléphone conceptuel.","photo-1511707171634-5f897ff02aa9"],
+["Wireless Earbuds","Technologie",49.99,"Écouteurs sans fil.","photo-1606220945770-b5b6c2c55bf1"],
+["Tablette Pro","Technologie",279.99,"Tablette moderne.","photo-1544244015-0df4b3ffc6b0"],
+["Luxury Watch","Accessoires",129.99,"Montre élégante.","photo-1523275335684-37898b6baf30"],
+["Premium Backpack","Accessoires",69.99,"Sac tendance.","photo-1553062407-98eeb64c6a62"],
+["Sac Urban","Accessoires",49.99,"Sac moderne.","photo-1548036328-c9fa89d128fa"],
+["Canapé Design","Maison",399.99,"Mobilier contemporain.","photo-1555041469-a586c61ea9bc"],
+["Décoration Maison","Maison",39.99,"Décoration intérieure.","photo-1600210492486-724fe5c67fb0"],
+["Lampe Maison","Maison",54.99,"Lampe moderne.","photo-1507473885765-e6ed057f782c"]
 ];
 
-let selected="Tous";
-let cart=0;
+let current="Tous";
+let cart=[];
+
+function openCategory(cat){
+current=cat;
+document.getElementById("hero").style.display="none";
+document.getElementById("categories").style.display="none";
+document.getElementById("shop").style.display="block";
+document.getElementById("categoryTitle").textContent=cat==="Tous"?"Tous les produits":cat;
+document.getElementById("search").value="";
+render();
+window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function home(){
+document.getElementById("hero").style.display="flex";
+document.getElementById("categories").style.display="block";
+document.getElementById("shop").style.display="none";
+window.scrollTo({top:0,behavior:"smooth"});
+}
 
 function render(){
 const query=document.getElementById("search").value.toLowerCase();
-const filtered=items.filter(p=>
-(selected==="Tous"||p.cat===selected)&&
-(p.name.toLowerCase().includes(query)||p.cat.toLowerCase().includes(query)||p.desc.toLowerCase().includes(query))
+const list=products.filter(p=>
+(current==="Tous"||p[1]===current)&&
+(p[0].toLowerCase().includes(query)||p[1].toLowerCase().includes(query))
 );
-document.getElementById("products").innerHTML=filtered.map(p=>`
+document.getElementById("products").innerHTML=list.map(p=>`
 <div class="product">
-<img src="https://images.unsplash.com/${p.img}?auto=format&fit=crop&w=650&q=80" alt="${p.name}" loading="lazy">
+<div class="photo">
+<img src="https://images.unsplash.com/${p[4]}?auto=format&fit=crop&w=650&q=80" alt="${p[0]}" loading="lazy">
+${p[5]?'<div class="brand-print">LN FUSION</div>':''}
+</div>
 <div class="info">
-<div class="category-label">${p.cat}</div>
-<h3>${p.name}</h3>
-<div class="description">${p.desc}</div>
-<div class="price">${p.price.toFixed(2).replace(".",",")} €</div>
+<div class="label">${p[1]}</div>
+<h3>${p[0]}</h3>
+<div class="desc">${p[3]}</div>
+<div class="price">${p[2].toFixed(2).replace(".",",")} €</div>
 <div class="fake">Prix fictif – démonstration</div>
-<button onclick="addCart()">Ajouter au panier 🛒</button>
+<button onclick="addCart('${p[0]}')">Ajouter au panier 🛒</button>
 </div>
-</div>
-`).join("");
-document.getElementById("empty").style.display=filtered.length?"none":"block";
+</div>`).join("");
+document.getElementById("empty").style.display=list.length?"none":"block";
 }
 
-function filter(category,element){
-selected=category;
-document.querySelectorAll(".category").forEach(c=>c.classList.remove("active"));
-element.classList.add("active");
-document.getElementById("search").value="";
-render();
-document.getElementById("boutique").scrollIntoView({behavior:"smooth"});
+function addCart(name){
+cart.push(name);
+document.getElementById("count").textContent=cart.length;
+alert(name+" ajouté au panier de démonstration !");
 }
 
-function addCart(){
-cart++;
-document.getElementById("count").textContent=cart;
-alert("Produit ajouté au panier de démonstration !");
+function showCart(){
+if(cart.length===0){alert("Ton panier est vide !");return;}
+alert("Panier de démonstration :\n\n"+cart.join("\n")+"\n\nNombre d'articles : "+cart.length+"\n\nAucune commande réelle n'est possible.");
 }
 
-render();
 </script>
 </body>
 </html>
